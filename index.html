@@ -1,0 +1,127 @@
+﻿02.06 1:32 PM
+index.html 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Divya ❤️</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(#020111, #191970);
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+    }
+
+
+    .card {
+        background: rgba(0,0,0,0.6);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(255,255,255,0.2);
+        max-width: 90%;
+    }
+
+
+    h1 {
+        color: #ffb6c1;
+    }
+
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+
+    #yes {
+        background: #ff69b4;
+        color: white;
+    }
+
+
+    #no {
+        background: #555;
+        color: white;
+        position: absolute;
+    }
+
+
+    .stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("https://i.imgur.com/7b1sKQX.png");
+        animation: moveStars 60s linear infinite;
+        opacity: 0.3;
+    }
+
+
+    @keyframes moveStars {
+        from {background-position: 0 0;}
+        to {background-position: 10000px 5000px;}
+    }
+</style>
+</head>
+<body>
+
+
+<div class="stars"></div>
+
+
+<div class="card">
+    <h1>Divya ❤️</h1>
+    <p>
+        You are my <b>semicolon</b>;<br>
+        without you meri life me humesha <b>errors</b> hi honge.
+    </p>
+
+
+    <p>
+        Under this night sky, with all my heart…<br>
+        will you be mine forever? ✨
+    </p>
+
+
+    <button id="yes" onclick="yesClick()">Yes </button>
+    <button id="no" onmouseover="moveNo()">No </button>
+</div>
+
+
+<script>
+    function moveNo() {
+        const btn = document.getElementById("no");
+        btn.style.top = Math.random() * window.innerHeight + "px";
+        btn.style.left = Math.random() * window.innerWidth + "px";
+    }
+
+
+    function yesClick() {
+        document.body.innerHTML = `
+            <div style="color:white; text-align:center;">
+                <h1>Yayyy! </h1>
+                <p>Our love just compiled successfully ✨</p>
+            </div>
+        `;
+    }
+</script>
+
+
+</body>
+</html>
