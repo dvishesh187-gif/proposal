@@ -1,127 +1,99 @@
-﻿02.06 1:32 PM
-index.html 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>For Divya ❤️</title>
-<style>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
     body {
-        margin: 0;
-        height: 100vh;
-        background: linear-gradient(#020111, #191970);
-        color: white;
-        font-family: 'Segoe UI', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        text-align: center;
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
     }
-
-
-    .card {
-        background: rgba(0,0,0,0.6);
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 0 25px rgba(255,255,255,0.2);
-        max-width: 90%;
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 90%;
     }
-
-
     h1 {
-        color: #ffb6c1;
+      color: #e91e63;
     }
-
-
     p {
-        font-size: 18px;
-        line-height: 1.6;
+      font-size: 18px;
     }
-
-
     button {
-        padding: 12px 25px;
-        font-size: 18px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        margin: 10px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 10px;
     }
-
-
     #yes {
-        background: #ff69b4;
-        color: white;
+      background: #e91e63;
+      color: white;
     }
-
-
     #no {
-        background: #555;
-        color: white;
-        position: absolute;
+      background: #ccc;
+      position: absolute;
     }
-
-
-    .stars {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url("https://i.imgur.com/7b1sKQX.png");
-        animation: moveStars 60s linear infinite;
-        opacity: 0.3;
+    .ring {
+      font-size: 80px;
+      animation: pop 1s infinite alternate;
     }
-
-
-    @keyframes moveStars {
-        from {background-position: 0 0;}
-        to {background-position: 10000px 5000px;}
+    @keyframes pop {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
     }
-</style>
+  </style>
 </head>
 <body>
 
+<audio autoplay loop>
+  <source src="https://pagalsong.in/uploads/systemuploads/mp3/Ishq%20Wala%20Love/Ishq%20Wala%20Love.mp3">
+</audio>
 
-<div class="stars"></div>
+<div class="box" id="proposal">
+  <h1>Hey ❤️</h1>
+  <p>
+    Jab bhi tum muskurati ho, duniya ruk si jaati hai 💫  
+    Aaj dil se poochna chahta hoon…
+  </p>
+  <h2>Will you be mine forever? 💖</h2>
 
-
-<div class="card">
-    <h1>Divya ❤️</h1>
-    <p>
-        You are my <b>semicolon</b>;<br>
-        without you meri life me humesha <b>errors</b> hi honge.
-    </p>
-
-
-    <p>
-        Under this night sky, with all my heart…<br>
-        will you be mine forever? ✨
-    </p>
-
-
-    <button id="yes" onclick="yesClick()">Yes </button>
-    <button id="no" onmouseover="moveNo()">No </button>
+  <button id="yes" onclick="yesClick()">YES 💍</button>
+  <button id="no" onmouseover="moveNo()">NO 🙈</button>
 </div>
 
-
 <script>
-    function moveNo() {
-        const btn = document.getElementById("no");
-        btn.style.top = Math.random() * window.innerHeight + "px";
-        btn.style.left = Math.random() * window.innerWidth + "px";
-    }
+  function moveNo() {
+    const no = document.getElementById("no");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    no.style.left = x + "px";
+    no.style.top = y + "px";
+  }
 
-
-    function yesClick() {
-        document.body.innerHTML = `
-            <div style="color:white; text-align:center;">
-                <h1>Yayyy! </h1>
-                <p>Our love just compiled successfully ✨</p>
-            </div>
-        `;
-    }
+  function yesClick() {
+    document.body.innerHTML = `
+      <div class="box">
+        <h1>She Said YES 😭❤️</h1>
+        <div class="ring">💍</div>
+        <p>
+          This ring is just a symbol…  
+          My heart was already yours 💖
+        </p>
+      </div>
+    `;
+  }
 </script>
-
 
 </body>
 </html>
